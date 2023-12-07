@@ -139,17 +139,11 @@ theme = 'FixIt'
     [params.home.profile]
       enable = true
       gravatarEmail = "bingo084@outlook.com"
-      # avatarURL = "/logo.png"
       avatarMenu = "/categories/"
       title = "Hi, I'm bingo."
       subTitle = "Keep learning, keep thinking."
       typeit = true
       social = true
-    # Home page posts
-    [params.home.posts]
-      enable = true
-      # special amount of posts in each home posts page
-      paginate = 6
 
   # FixIt 0.2.16 | CHANGED Social config about the author
   [params.social]
@@ -402,6 +396,9 @@ theme = 'FixIt'
   [params.pace]
     enable = true
     color = "orange"
+
+  [params.customFilePath]
+    profile = "custom/profile.html"
   
 # -------------------------------------------------------------------------------------
 # Modules Configuration
