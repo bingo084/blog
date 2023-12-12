@@ -431,6 +431,11 @@ theme = 'FixIt'
       table = true
       taskList = true
       typographer = true
+      [markup.goldmark.extensions.cjk]
+        eastAsianLineBreaks = true
+        eastAsianLineBreaksStyle = 'simple'
+        enable = true
+        escapedSpace = false
     [markup.goldmark.renderer]
       unsafe = true
   [markup.tableOfContents]
