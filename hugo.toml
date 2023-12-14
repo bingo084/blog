@@ -4,7 +4,7 @@
 # -------------------------------------------------------------------------------------
 
 title = "bingo's log"
-baseURL = 'https://binlog.xyz/'
+baseURL = 'https://www.binlog.xyz/'
 defaultContentLanguage = "zh-cn"
 languageCode = 'zh-CN'
 hasCJKLanguage = true
@@ -50,20 +50,14 @@ theme = 'FixIt'
   version = "0.2.X"
   description = "bingo的个人博客"
   keywords = ["bingo", "blog"]
-  defaultTheme = "auto"
   gitRepo = ""
   fingerprint = ""
-  dateFormat = "2006-01-02"
-  images = ["/logo.png"]
-  enablePWA = true
   externalIcon = true
-  disableThemeInject = false
 
   [params.author]
     name = "bingo"
     email = "bingo084@outlook.com"
-    link = "https://binlog.xyz/"
-    avatar = ""
+    link = "https://github.com/bingo084"
 
   [params.app]
     title = "bingo's log"
@@ -78,15 +72,11 @@ theme = 'FixIt'
   [params.search]
     enable = true
     type = "fuse"
-    contentLength = 4000
-    [params.search.fuse]
-      minMatchCharLength = 2
 
   [params.header]
     [params.header.title]
       logo = "/logo.png"
       name = "bingo's log"
-      typeit = false
     [params.header.subtitle]
       name = "记录生活，分享知识"
       typeit = true
@@ -166,7 +156,7 @@ theme = 'FixIt'
     fraction = true
     fontawesome = true
     license = '<a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>'
-    linkToMarkdown = true
+    linkToMarkdown = false
     rssFullText = false
     pageStyle = "narrow"
     autoBookmark = false
@@ -399,16 +389,6 @@ theme = 'FixIt'
 
   [params.customFilePath]
     profile = "custom/profile.html"
-  
-# -------------------------------------------------------------------------------------
-# Modules Configuration
-# See: https://gohugo.io/hugo-modules/configuration/#module-config-imports
-# -------------------------------------------------------------------------------------
-
-[module]
-  [module.hugoVersion]
-    extended = true
-    min = "0.110.0"
 
 # -------------------------------------------------------------------------------------
 # Markup related configuration in Hugo
@@ -417,20 +397,11 @@ theme = 'FixIt'
 
 [markup]
   [markup.highlight]
-    codeFences = true
     lineNos = true
-    lineNumbersInTable = true
     noClasses = false
     guessSyntax = true
   [markup.goldmark]
     [markup.goldmark.extensions]
-      definitionList = true
-      footnote = true
-      linkify = true
-      strikethrough = true
-      table = true
-      taskList = true
-      typographer = true
       [markup.goldmark.extensions.cjk]
         eastAsianLineBreaks = true
         eastAsianLineBreaksStyle = 'simple'
@@ -438,27 +409,6 @@ theme = 'FixIt'
         escapedSpace = false
     [markup.goldmark.renderer]
       unsafe = true
-  [markup.tableOfContents]
-    startLevel = 2
-    endLevel = 6
-
-# -------------------------------------------------------------------------------------
-# Sitemap Configuration
-# See: https://gohugo.io/templates/sitemap-template/#configuration
-# -------------------------------------------------------------------------------------
-
-[sitemap]
-  changefreq = "weekly"
-  filename = "sitemap.xml"
-  priority = 0.5
-
-# -------------------------------------------------------------------------------------
-# Permalinks Configuration
-# See: https://gohugo.io/content-management/urls/#permalinks
-# -------------------------------------------------------------------------------------
-
-[Permalinks]
-  posts = "posts/:slugorfilename"
 
 # -------------------------------------------------------------------------------------
 # Privacy Configuration
@@ -472,26 +422,11 @@ theme = 'FixIt'
     privacyEnhanced = true
 
 # -------------------------------------------------------------------------------------
-# Media Types
-# See: https://gohugo.io/templates/output-formats/#media-types
-# -------------------------------------------------------------------------------------
-
-[mediaTypes]
-  [mediaTypes."text/markdown"]
-    suffixes = ["md"]
-  [mediaTypes."text/plain"]
-    suffixes = ["txt"]
-
-# -------------------------------------------------------------------------------------
 # Output Format Definitions
 # See: https://gohugo.io/templates/output-formats/#output-format-definitions
 # -------------------------------------------------------------------------------------
 
 [outputFormats]
-  [outputFormats.MarkDown]
-    mediaType = "text/markdown"
-    isPlainText = true
-    isHTML = false
   [outputFormats.BaiduUrls]
     baseName = "baidu_urls"
     mediaType = "text/plain"
@@ -505,7 +440,3 @@ theme = 'FixIt'
 
 [outputs]
   home = ["HTML", "RSS", "JSON", "BaiduUrls"]
-  page = ["HTML", "MarkDown"]
-  section = ["HTML", "RSS"]
-  taxonomy = ["HTML"]
-  term = ["HTML", "RSS"]
