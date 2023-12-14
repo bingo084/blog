@@ -21,7 +21,7 @@ jobs:
           extended: true
 
       - name: Hugo build
-        run: hugo --minify
+        run: hugo --cleanDestinationDir --minify
 
       - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v4
