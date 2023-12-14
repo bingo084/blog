@@ -29,6 +29,7 @@ jobs:
           repo: bingo084/bingo084.github.io
           target_branch: main
           build_dir: public
+          keep_history: true
           commit_message: ${{ github.event.head_commit.message }}
         env:
           GH_PAT: ${{ secrets.PERSONAL_TOKEN_DEPLOY }}
