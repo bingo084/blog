@@ -1,0 +1,2 @@
+[footer]
+poweredBySome = "Powered by {{ .Hugo }} | Theme - {{ .Theme }}"
