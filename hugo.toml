@@ -4,7 +4,7 @@
 # -------------------------------------------------------------------------------------
 
 title = "bingo's log"
-baseURL = 'https://www.binlog.xyz/'
+baseURL = 'https://www.binlog.cc/'
 defaultContentLanguage = "zh-cn"
 languageCode = 'zh-CN'
 hasCJKLanguage = true
