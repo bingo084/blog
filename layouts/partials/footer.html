@@ -1,4 +1,4 @@
-{{- if .Site.Params.footer.custom -}}
+{{- if ne .Site.Params.footer.enable false -}}
   <footer class="footer">
     <div class="footer-container">
       {{- /* Hugo and FixIt */ -}}
@@ -41,7 +41,7 @@
 
           {{- /* GOV */ -}}
           {{- with .Site.Params.footer.gov -}}
-            <span class="gov">{{ . | safeHTML }}</span>
+            <span class="gov footer-divider">{{ . | safeHTML }}</span>
           {{- end -}}
 
           {{- /* ICP */ -}}
