@@ -148,13 +148,9 @@ theme = 'FixIt'
     enablePost = true
 
   [params.analytics]
-    enable = false
+    enable = true
     [params.analytics.google]
-      id = ""
-      anonymizeIP = true
-    [params.analytics.fathom]
-      id = ""
-      server = ""
+      id = "G-GHBP2G0JY9"
 
   [params.cookieconsent]
     enable = false
