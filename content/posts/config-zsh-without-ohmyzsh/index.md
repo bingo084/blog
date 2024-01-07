@@ -208,7 +208,25 @@ compinit
 
 ## 配置主题
 
+使用 [Starship] 配置 prompt。
+
+### 安装 Starship
+
+```bash { title = "Arch Linux" }
+sudo pacman -S starship
+```
+
+### 启用 Starship
+
+```bash { title = "Arch Linux" }
+echo 'eval "$(starship init zsh)"' >>~/.zshrc
+```
+
+### [配置 Starship]
+
 [Zsh]: https://www.zsh.org/ "一款功能强大的命令行解释器（shell）"
 [oh-my-zsh]: https://ohmyz.sh/ "a delightful, open source, community-driven framework for managing your Zsh configuration."
 [zshcompsys 手册页]: https://linux.die.net/man/1/zshcompsys "zshcompsys - zsh completion system"
 [zshoptions 手册页]: https://linux.die.net/man/1/zshoptions "zshoptions - zsh options"
+[Starship]: https://starship.rs/ "The minimal, blazing-fast, and infinitely customizable prompt for any shell!"
+[配置 Starship]: https://starship.rs/zh-CN/config/#配置
