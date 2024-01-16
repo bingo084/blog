@@ -254,7 +254,7 @@ ZSH_AUTOSUGGEST_STRATEGY="match_prev_cmd"
 
 ```bash { title = "Arch Linux" }
 sudo pacman -S zsh-syntax-highlighting
-echo "source usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >>${ZDOTDIR:-$HOME}/.zshrc
+echo "source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >>${ZDOTDIR:-$HOME}/.zshrc
 ```
 
 ```bash { title = "Mac OS" }
