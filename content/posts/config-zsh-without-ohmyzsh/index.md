@@ -224,9 +224,51 @@ echo 'eval "$(starship init zsh)"' >>~/.zshrc
 
 ### [配置 Starship]
 
+## 安装插件
+
+### [zsh-autosuggestions]
+
+#### 安装
+
+```bash { title = "Arch Linux" }
+sudo pacman -S zsh-autosuggestions
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+```
+
+```bash { title = "Mac OS" }
+brew install zsh-autosuggestions
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+```
+
+{{< figure src="zsh-autosuggestions.png" title="zsh-autosuggestions效果" >}}
+
+#### 配置
+
+##### 建议策略
+
+ZSH_AUTOSUGGEST_STRATEGY="match_prev_cmd"
+
+### [zsh-syntax-highlighting]
+
+#### 安装
+
+```bash { title = "Arch Linux" }
+sudo pacman -S zsh-syntax-highlighting
+echo "source usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >>${ZDOTDIR:-$HOME}/.zshrc
+```
+
+```bash { title = "Mac OS" }
+brew install zsh-syntax-highlighting
+echo "source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >>${ZDOTDIR:-$HOME}/.zshrc
+```
+
+{{< figure src="zsh-syntax-highlighting.png" title="zsh-syntax-highlighting效果" >}}
+
 [Zsh]: https://www.zsh.org/ "一款功能强大的命令行解释器（shell）"
 [oh-my-zsh]: https://ohmyz.sh/ "a delightful, open source, community-driven framework for managing your Zsh configuration."
 [zshcompsys 手册页]: https://linux.die.net/man/1/zshcompsys "zshcompsys - zsh completion system"
 [zshoptions 手册页]: https://linux.die.net/man/1/zshoptions "zshoptions - zsh options"
 [Starship]: https://starship.rs/ "The minimal, blazing-fast, and infinitely customizable prompt for any shell!"
 [配置 Starship]: https://starship.rs/zh-CN/config/#配置
+[zsh-autosuggestions]: https://github.com/zsh-users/zsh-autosuggestions "Fish-like autosuggestions for zsh."
+[zsh-syntax-highlighting]: https://github.com/zsh-users/zsh-syntax-highlighting "Fish shell like syntax highlighting for Zsh."
