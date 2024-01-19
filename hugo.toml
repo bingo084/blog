@@ -127,6 +127,8 @@ theme = 'FixIt'
 
     [params.page.expirationReminder]
       enable = true
+    [params.page.code]
+      maxShownLines = 20
     [params.page.edit]
       enable = true
     [params.page.share]
