@@ -1,12 +1,11 @@
 ---
 title: 纯净配置Zsh
 date: 2023-12-09T21:21:14+08:00
-draft: true
 keywords:
 tags:
-  - draft
+  - zsh
 categories:
-  - draft
+  - config
 resources:
   - name: featured-image
     src: featured-image.png
@@ -228,41 +227,46 @@ echo 'eval "$(starship init zsh)"' >>~/.zshrc
 
 ### [zsh-autosuggestions]
 
-#### 安装
-
-```bash { title = "Arch Linux" }
+```bash { title = "安装-Arch Linux" }
 sudo pacman -S zsh-autosuggestions
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 ```
 
-```bash { title = "Mac OS" }
+```bash { title = "安装-Mac OS" }
 brew install zsh-autosuggestions
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 ```
 
 {{< figure src="zsh-autosuggestions.png" title="zsh-autosuggestions效果" >}}
 
-#### 配置
+```bash { title = "配置建议策略" }
+# 先尝试从历史记录中查找建议，如果找不到，再从补全引擎中查找。
+export ZSH_AUTOSUGGEST_STRATEGY=(match_prev_cmd completion)
+```
 
-##### 建议策略
-
-ZSH_AUTOSUGGEST_STRATEGY="match_prev_cmd"
+{{< admonition tip "`zsh-autosuggestions` 提供了三种建议策略" >}}
+`history`：从历史记录中选择最近的匹配。  
+`completion`：从补全列表中选择最近的匹配。  
+`match_prev_cmd`: 类似 history，但选择最近执行的命令的前一个历史项匹配的最近匹配。  
+{{< /admonition >}}
 
 ### [zsh-syntax-highlighting]
 
-#### 安装
-
-```bash { title = "Arch Linux" }
+```bash { title = "安装-Arch Linux" }
 sudo pacman -S zsh-syntax-highlighting
 echo "source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >>${ZDOTDIR:-$HOME}/.zshrc
 ```
 
-```bash { title = "Mac OS" }
+```bash { title = "安装-Mac OS" }
 brew install zsh-syntax-highlighting
 echo "source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >>${ZDOTDIR:-$HOME}/.zshrc
 ```
 
 {{< figure src="zsh-syntax-highlighting.png" title="zsh-syntax-highlighting效果" >}}
+
+## 配置别名、环境变量
+
+最后根据自己的需要配置别名、环境变量等。
 
 [Zsh]: https://www.zsh.org/ "一款功能强大的命令行解释器（shell）"
 [oh-my-zsh]: https://ohmyz.sh/ "a delightful, open source, community-driven framework for managing your Zsh configuration."
