@@ -49,14 +49,17 @@ theme = 'FixIt'
 [params]
   description = "bingo的个人博客"
   keywords = ["bingo", "blog"]
-  gitRepo = "https://github.com/bingo084/blog"
   enablePWA = true
   externalIcon = true
+  indexWithSubtitle = true
 
   [params.author]
     name = "bingo"
     email = "bingo084@outlook.com"
     link = "https://github.com/bingo084"
+
+  [params.gitInfo]
+    repo = "https://github.com/bingo084/blog"
 
   [params.app]
     title = "bingo's log"
@@ -80,7 +83,6 @@ theme = 'FixIt'
 
   [params.footer]
     enable = true
-    hugo = true
     copyright = true
     author = true
     since = "2021"
@@ -122,14 +124,23 @@ theme = 'FixIt'
 
   [params.page]
     lightgallery = "force"
-    license = '<a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>'
+    linkToSource = false
+    linkToReport = false
     pageStyle = "narrow"
+    collectionList = true
+    collectionNavigation = true
 
     [params.page.expirationReminder]
       enable = true
+    [params.page.heading]
+      [params.page.heading.number]
+        enable = true
     [params.page.code]
       maxShownLines = 20
-    [params.page.edit]
+    [params.page.cacheRemoteImages]
+      enable = true
+      replace = true
+    [params.page.related]
       enable = true
     [params.page.share]
       enable = false
@@ -205,21 +216,16 @@ theme = 'FixIt'
     privacyEnhanced = true
 
 # -------------------------------------------------------------------------------------
-# Output Format Definitions
-# See: https://gohugo.io/templates/output-formats/#output-format-definitions
-# -------------------------------------------------------------------------------------
-
-[outputFormats]
-  [outputFormats.BaiduUrls]
-    baseName = "baidu_urls"
-    mediaType = "text/plain"
-    isPlainText = true
-    isHTML = false
-
-# -------------------------------------------------------------------------------------
 # Customizing Output Formats
 # See: https://gohugo.io/templates/output-formats/#customizing-output-formats
 # -------------------------------------------------------------------------------------
 
 [outputs]
-  home = ["HTML", "RSS", "JSON", "BaiduUrls"]
+  home = ["HTML", "RSS", "JSON", "baidu_urls", "archives", "offline", "readme"]
+
+[related]
+  includeNewer = true
+  threshold = 80
+[[related.indices]]
+    name = 'keywords'
+    weight = 100

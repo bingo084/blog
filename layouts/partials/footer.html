@@ -1,24 +1,33 @@
-{{- if ne .Site.Params.footer.enable false -}}
+{{- $footerConfig := .Site.Params.footer -}}
+
+{{- if ne $footerConfig.enable false -}}
   <footer class="footer">
     <div class="footer-container">
-      {{- /* Hugo and FixIt */ -}}
-      {{- if ne .Site.Params.footer.hugo false -}}
-        <div class="footer-line powered{{ with .Site.Params.footer.order.powered }} order-{{ . }}{{ end }}">
-          {{- $hugo := printf `<a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreferrer" title="Hugo %v">Hugo</a>` hugo.Version -}}
-          {{- $theme := printf `<a href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="external" title="FixIt %v"><img class="fixit-icon" src="%v" alt="FixIt logo" />&nbsp;FixIt</a>`
-            (.Scratch.Get "version")
-            (resources.Get "fixit.svg" | minify).RelPermalink
-          -}}
+      {{- /* Powered by Hugo and Theme - FixIt */ -}}
+      {{- if ne $footerConfig.powered.enable false -}}
+        <div class="footer-line powered{{ with $footerConfig.order.powered }} order-{{ . }}{{ end }}">
+          {{- $hugo := printf `<a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreferrer" title="Hugo %v">{hugoLogo}Hugo</a>` hugo.Version -}}
+          {{- $theme := printf `<a href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="external" title="FixIt %v">{themeLogo}FixIt</a>` (.Scratch.Get "version") -}}
+          {{- if $footerConfig.powered.hugoLogo -}}
+          {{- $hugoLogo := printf `<img class="hugo-icon" src="%v" alt="Hugo logo" /> ` (resources.Get "images/hugo.svg" | minify).RelPermalink -}}
+            {{- $hugo = replace $hugo "{hugoLogo}" $hugoLogo -}}
+          {{- end -}}
+          {{- if $footerConfig.powered.themeLogo -}}
+            {{- $themeLogo := printf `<img class="fixit-icon" src="%v" alt="FixIt logo" /> ` (resources.Get "images/fixit.svg" | minify).RelPermalink -}}
+            {{- $theme = replace $theme "{themeLogo}" $themeLogo -}}
+          {{- end -}}
+          {{- $hugo = replace $hugo "{hugoLogo}" "" -}}
+          {{- $theme = replace $theme "{themeLogo}" "" -}}
           {{- dict "Hugo" $hugo "Theme" $theme | T "footer.poweredBySome" | safeHTML }}
         </div>
       {{- end -}}
 
-      {{- if .Site.Params.footer.copyright | or .Site.Params.footer.author | or .Site.Params.footer.license | or .Site.Params.footer.gov | or .Site.Params.footer.icp -}}
-        <div class="footer-line copyright{{ with .Site.Params.footer.order.copyright }} order-{{ . }}{{ end }}" itemscope itemtype="http://schema.org/CreativeWork">
+      {{- if $footerConfig.copyright | or $footerConfig.author | or $footerConfig.license | or $footerConfig.gov | or $footerConfig.icp -}}
+        <div class="footer-line copyright{{ with $footerConfig.order.copyright }} order-{{ . }}{{ end }}" itemscope itemtype="http://schema.org/CreativeWork">
           {{- /* Copyright year */ -}}
-          {{- if ne .Site.Params.footer.copyright false -}}
+          {{- if ne $footerConfig.copyright false -}}
             {{ dict "Class" "fa-regular fa-copyright fa-fw" | partial "plugin/icon.html" }}
-            {{ with .Site.Params.footer.since -}}
+            {{ with $footerConfig.since -}}
               <span itemprop="copyrightYear">
                 {{- if lt . now.Year }}{{ . }} - {{ end }}{{ now.Year -}}
               </span>
@@ -28,32 +37,32 @@
           {{- end -}}
 
           {{- /* Author */ -}}
-          {{- if ne .Site.Params.footer.author false -}}
+          {{- if ne $footerConfig.author false -}}
             <span class="author" itemprop="copyrightHolder">
               {{ partial "plugin/link.html" (dict "Destination" ($.Site.Params.author.link | default .Site.Home.RelPermalink) "Content" .Site.Params.author.name) -}}
             </span>
           {{- end -}}
 
           {{- /* License */ -}}
-          {{- with .Site.Params.footer.license -}}
+          {{- with $footerConfig.license -}}
             <span class="license footer-divider">{{ . | safeHTML }}</span>
           {{- end -}}
 
           {{- /* GOV */ -}}
-          {{- with .Site.Params.footer.gov -}}
+          {{- with $footerConfig.gov -}}
             <span class="gov footer-divider">{{ . | safeHTML }}</span>
           {{- end -}}
 
           {{- /* ICP */ -}}
-          {{- with .Site.Params.footer.icp -}}
+          {{- with $footerConfig.icp -}}
             <span class="icp footer-divider">{{ . | safeHTML }}</span>
           {{- end -}}
         </div>
       {{- end -}}
 
       {{- $siteTime := .Scratch.Get "siteTime" -}}
-      {{- if $siteTime.enable | or .Site.Params.footer.wordCount | or .Site.Params.ibruce.enable -}}
-        <div class="footer-line statistics{{ with .Site.Params.footer.order.statistics }} order-{{ . }}{{ end }}">
+      {{- if $siteTime.enable | or $footerConfig.wordCount | or .Site.Params.ibruce.enable -}}
+        <div class="footer-line statistics{{ with $footerConfig.order.statistics }} order-{{ . }}{{ end }}">
           {{- if $siteTime.enable | and $siteTime.value -}}
             {{- with $siteTime -}}
               <span class="site-time" title='{{ T "footer.siteRunning" }}'>
