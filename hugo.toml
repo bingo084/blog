@@ -127,6 +127,7 @@ theme = 'FixIt'
     linkToSource = false
     linkToReport = false
     pageStyle = "narrow"
+    endFlag = "（本文完）"
     collectionList = true
     collectionNavigation = true
 
