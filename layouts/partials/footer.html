@@ -65,6 +65,7 @@
             {{- end -}}
           {{- end -}}
           {{- if eq .Site.Params.ibruce.enable true -}}
+              <script defer src="https://vercount.one/js"></script>
             {{- $loading := dict "Class" "fa-solid fa-spinner fa-spin fa-fw" | partial "plugin/icon.html" -}}
               <span id="busuanzi_container_site_uv" class="footer-divider" title='{{ T "footer.siteUV" }}'>
                 {{- dict "Class" "fa-regular fa-user fa-fw" | partial "plugin/icon.html" -}}&nbsp;<span id="busuanzi_value_site_uv">{{ $loading }}</span>{{- /* NO_SPACING */ -}}
