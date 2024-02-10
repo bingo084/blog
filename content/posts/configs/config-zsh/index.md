@@ -1,5 +1,5 @@
 ---
-title: 纯净配置Zsh
+title: 纯净配置 Zsh
 date: 2023-12-09T21:21:14+08:00
 keywords:
 tags:
