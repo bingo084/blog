@@ -1,7 +1,6 @@
 ---
 title: 配置 Linux 下的 FTP 服务
 date: 2024-02-10T21:41:28+08:00
-draft: true
 keywords:
   - ftp
   - vsftpd
