@@ -18,7 +18,7 @@ categories:
 {{ end }}
 resources:
   - name: featured-image
-    src: images/featured-image.jpg
+    src: images/featured-image.png
 ---
 
 <!--more-->
