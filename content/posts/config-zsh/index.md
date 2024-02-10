@@ -8,7 +8,7 @@ categories:
   - config
 resources:
   - name: featured-image
-    src: featured-image.png
+    src: images/featured-image.png
 ---
 
 网上许多 [Zsh]
@@ -237,7 +237,7 @@ brew install zsh-autosuggestions
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 ```
 
-{{< figure src="zsh-autosuggestions.png" title="zsh-autosuggestions效果" >}}
+{{< figure src="images/zsh-autosuggestions.png" title="zsh-autosuggestions效果" >}}
 
 ```bash { title = "配置建议策略" }
 # 先尝试从历史记录中查找建议，如果找不到，再从补全引擎中查找。
@@ -262,7 +262,7 @@ brew install zsh-syntax-highlighting
 echo "source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >>${ZDOTDIR:-$HOME}/.zshrc
 ```
 
-{{< figure src="zsh-syntax-highlighting.png" title="zsh-syntax-highlighting效果" >}}
+{{< figure src="images/zsh-syntax-highlighting.png" title="zsh-syntax-highlighting效果" >}}
 
 ## 配置别名、环境变量
 
