@@ -206,6 +206,14 @@ theme = 'FixIt'
       unsafe = true
 
 # -------------------------------------------------------------------------------------
+# Permalinks Configuration
+# See: https://gohugo.io/content-management/urls/#permalinks
+# -------------------------------------------------------------------------------------
+
+[Permalinks]
+  posts = "posts/:slugorfilename"
+
+# -------------------------------------------------------------------------------------
 # Privacy Configuration
 # See: https://gohugo.io/about/hugo-and-gdpr/
 # -------------------------------------------------------------------------------------
