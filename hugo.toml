@@ -149,10 +149,10 @@ theme = 'FixIt'
       enable = true
       [params.page.comment.giscus]
         enable = true
-        repo = "bingo084/bingo084.github.io"
-        repoId = "R_kgDOK5hh3w"
+        repo = "bingo084/blog"
+        repoId = "R_kgDOK2zbnA"
         category = "Announcements"
-        categoryId = "DIC_kwDOK5hh384Cb1-h"
+        categoryId = "DIC_kwDOK2zbnM4CenAA"
         mapping = "title"
         strict = "1"
         darkTheme = "noborder_gray"
