@@ -39,6 +39,13 @@ enableEmoji = true
     weight = 3
     [menu.main.params]
       icon = "fa-solid fa-tags"
+  [[menu.main]]
+    identifier = "logs"
+    name = "日志"
+    url = "/logs/"
+    weight = 4
+    [menu.main.params]
+      icon = "fa-solid fa-book"
 
 # -------------------------------------------------------------------------------------
 # Theme Core Configuration
@@ -241,3 +248,9 @@ enableEmoji = true
 [module]
   [[module.imports]]
     path = "github.com/hugo-fixit/FixIt"
+  [[module.mounts]]
+      source = "content"
+      target = "content"
+  [[module.mounts]]
+      source = "private"
+      target = "content"
