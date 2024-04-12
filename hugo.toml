@@ -216,8 +216,9 @@ enableEmoji = true
 # See: https://gohugo.io/content-management/urls/#permalinks
 # -------------------------------------------------------------------------------------
 
-[Permalinks]
+[permalinks]
   posts = "posts/:slugorfilename"
+  logs = "logs/:slugorfilename"
 
 # -------------------------------------------------------------------------------------
 # Privacy Configuration
