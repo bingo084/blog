@@ -3,9 +3,7 @@ title: {{ replace .File.ContentBaseName "-" " " | title }}
 date: {{ .Date }}
 draft: true
 keywords:
-  - draft
 tags:
-  - draft
 categories:
 {{- $path := split
 (.File.Dir
