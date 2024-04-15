@@ -4,7 +4,7 @@
 # -------------------------------------------------------------------------------------
 
 title = "bingo's log"
-baseURL = 'https://www.binlog.cc/'
+baseURL = "http://localhost:1313"
 defaultContentLanguage = "zh-cn"
 languageCode = 'zh-CN'
 hasCJKLanguage = true
@@ -151,26 +151,6 @@ enableEmoji = true
       enable = true
     [params.page.share]
       enable = false
-    [params.page.comment]
-      enable = true
-      [params.page.comment.giscus]
-        enable = true
-        repo = "bingo084/blog"
-        repoId = "R_kgDOK2zbnA"
-        category = "Announcements"
-        categoryId = "DIC_kwDOK2zbnM4CenAA"
-        mapping = "title"
-        strict = "1"
-        darkTheme = "noborder_gray"
-
-  [params.ibruce]
-    enable = true
-    enablePost = true
-
-  [params.analytics]
-    enable = true
-    [params.analytics.google]
-      id = "G-GHBP2G0JY9"
 
   [params.cookieconsent]
     enable = false

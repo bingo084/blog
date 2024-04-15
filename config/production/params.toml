@@ -1,0 +1,21 @@
+[page.comment]
+  enable = true
+  [page.comment.giscus]
+    enable = true
+    repo = "bingo084/blog"
+    repoId = "R_kgDOK2zbnA"
+    category = "Announcements"
+    categoryId = "DIC_kwDOK2zbnM4CenAA"
+    mapping = "title"
+    strict = "1"
+    darkTheme = "noborder_gray"
+
+[ibruce]
+  enable = true
+  enablePost = true
+
+[analytics]
+  enable = true
+  [analytics.google]
+    id = "G-GHBP2G0JY9"
+
