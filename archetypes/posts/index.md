@@ -17,7 +17,7 @@ categories:
 {{ end }}
 resources:
   - name: featured-image
-    src: images/featured-image.png
+    src: images/featured-image.webp
 ---
 
 <!--more-->
