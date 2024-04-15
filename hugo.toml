@@ -81,7 +81,7 @@ enableEmoji = true
 
   [params.header]
     [params.header.title]
-      logo = "/logo.png"
+      logo = "/android-chrome-512x512.png"
       name = "bingo's log"
     [params.header.subtitle]
       name = "记录生活，分享知识"
