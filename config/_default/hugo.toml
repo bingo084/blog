@@ -139,9 +139,6 @@ enableEmoji = true
 
     [params.page.expirationReminder]
       enable = true
-    [params.page.heading]
-      [params.page.heading.number]
-        enable = true
     [params.page.code]
       maxShownLines = 20
     [params.page.cacheRemoteImages]
