@@ -8,7 +8,7 @@ categories:
   - config
 resources:
   - name: featured-image
-    src: images/featured-image.png
+    src: images/featured-image.webp
 ---
 
 网上许多 [Zsh]
