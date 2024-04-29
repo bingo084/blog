@@ -15,7 +15,14 @@ jobs:
         with:
           token: ${{ secrets.PERSONAL_TOKEN_DEPLOY }}
           fetch-depth: 0
-          submodules: recursive
+
+      - name: Checkout private
+        uses: actions/checkout@v4
+        with:
+          repository: bingo084/blog-private
+          token: ${{ secrets.PERSONAL_TOKEN_DEPLOY }}
+          path: private
+          fetch-depth: 0
 
       - name: Hugo setup
         uses: peaceiris/actions-hugo@v2
