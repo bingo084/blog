@@ -141,9 +141,6 @@ enableEmoji = true
       enable = true
     [params.page.code]
       maxShownLines = 20
-    [params.page.cacheRemoteImages]
-      enable = true
-      replace = true
     [params.page.related]
       enable = true
     [params.page.share]
