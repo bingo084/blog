@@ -41,5 +41,6 @@ jobs:
           target_branch: main
           build_dir: public
           commit_message: ${{ github.event.head_commit.message }}
+          fqdn: www.binlog.cc
         env:
           GH_PAT: ${{ secrets.PERSONAL_TOKEN_DEPLOY }}
