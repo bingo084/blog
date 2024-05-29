@@ -161,10 +161,6 @@ enableEmoji = true
     enable = true
     color = "orange"
 
-  [params.customFilePath]
-    profile = "custom/profile.html"
-    footer = "custom/footer.html"
-
 # -------------------------------------------------------------------------------------
 # Markup related configuration in Hugo
 # See: https://gohugo.io/getting-started/configuration-markup/
