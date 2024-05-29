@@ -97,11 +97,13 @@ enableEmoji = true
     [params.footer.siteTime]
       enable = true
       animate = true
+      pre = "博客已运行"
       value = "2021-11-04T09:09:36+08:00"
     [params.footer.order]
-      powered = 1
-      copyright = 2
-      statistics = 0
+      powered = 2
+      copyright = 3
+      statistics = 1
+      visitor = 0
 
   [params.section]
     [params.section.recentlyUpdated]
