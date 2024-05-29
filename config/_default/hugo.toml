@@ -145,6 +145,9 @@ enableEmoji = true
       enable = true
     [params.page.share]
       enable = false
+    [params.page.library]
+      [params.page.library.js]
+        flyfish = "/js/flyfish.js"
 
   [params.cookieconsent]
     enable = false
